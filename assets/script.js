@@ -24,13 +24,19 @@
 
         const studentName = document.getElementById("studentName").value.trim();
         const studentId = document.getElementById("studentId").value.trim();
+        const studentEmail = document.getElementById("studentEmail").value.trim();
+        const studentMobile = document.getElementById("studentMobile").value.trim();
         const studentClass = document.getElementById("studentClass").value.trim();
         const rollNo = document.getElementById("rollNo").value.trim();
 
-        if (studentName !== '' && studentId !== '' && studentClass !== '' && rollNo !== '') {
+        if (studentName !== '' && studentId !== '' && studentClass !== '' && rollNo !== '' && studentEmail !== ''
+            && studentMobile !== ''
+        ) {
             let userData = {
                 studentName: studentName,
                 studentId: studentId,
+                studentEmail:studentEmail,
+                studentMobile:studentMobile,
                 studentClass: studentClass,
                 rollNo: rollNo
             };
@@ -70,11 +76,15 @@
         row.innerHTML = `
             <td>${user.studentName}</td>
             <td>${user.studentId}</td>
+            <td>${user.studentEmail}</td>
+            <td>${user.studentMobile}</td>
+
+
             <td>${user.studentClass}</td>
             <td>${user.rollNo}</td>
             <td>
-                <button class="btn btn-danger" onclick="deleteUser(this)"><i class='fa fa-trash'></i></button>
-                <button class="btn btn-primary" onclick="editUser(this)"><i class='fa fa-edit'></i></button>
+                <button class="btn btn-sm btn-danger" onclick="deleteUser(this)"><i class='fa fa-trash'></i></button>
+                <button class="btn btn-sm btn-primary" onclick="editUser(this)"><i class='fa fa-edit'></i></button>
             </td>
         `;
         tableBody.appendChild(row);

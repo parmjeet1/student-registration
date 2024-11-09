@@ -33,6 +33,16 @@
                         <input type="text" class="form-control" id="studentId"  pattern="^[A-Za-z0-9]+$" title="Student ID can only contain letters and numbers"  placeholder="Enter ID"  required>
                     </div>
                     <div class="form-group">
+                        <label for="studentId">Student Email:</label>
+                        <input type="email" class="form-control" id="studentEmail"   title="Match the pattern yourname@domain.com"  placeholder="Enter Email"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="studentId">Student Mobile:</label>
+ <input type="tel" class="form-control" id="studentMobile" placeholder="Enter Mobile number" required pattern="^[0-9]{10}$">
+    
+                    </div>
+                    
+                    <div class="form-group">
                         <label for="class">Class:</label>
                         <input type="text" class="form-control" pattern="^[A-Za-z0-9 ]+$" title="Class can only contain letters, numbers, and spaces" id="studentClass" placeholder="Enter class" required>
                     </div>
@@ -47,12 +57,16 @@
 
         <!-- Table Section -->
         <div class="col-md-8">
+           
             <div class="table-container">
+                <span  class="header-title">Students Records</span>
                 <table class="table table-bordered" id="userTable"> 
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Id</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
                             <th>Class</th>
                             <th>Roll No.</th>
                             <th>Actions</th>
