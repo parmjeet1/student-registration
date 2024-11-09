@@ -1,0 +1,35 @@
+ body {
+            background: linear-gradient(to right, #f8b195, #f67280, #c06c84, #6c5b7b, #355c7d);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .registration-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .table-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            background-color: #6c5b7b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 5px 10px;
+        }
+        .btn-custom:hover {
+            background-color: #355c7d;
+        }

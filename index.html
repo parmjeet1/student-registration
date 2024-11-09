@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Registration System</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <!-- Form Section -->
+        <div class="col-md-4">
+            <div class="registration-form">
+                <div class="header-title">Student Registration System</div>
+                <form id="userForm">
+                    <div class="form-group">
+                        <label for="studentName">Student Name:</label>
+                        <input type="text" class="form-control" id="studentName" placeholder="Enter name"  onkeyup="validateName()" required>
+                                <small id="nameError" class="text-danger" style="display: none;">Name can only contain letters (A-Z, a-z)</small>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="studentId">Student Id:</label>
+                        <input type="text" class="form-control" id="studentId"  pattern="^[A-Za-z0-9]+$" title="Student ID can only contain letters and numbers"  placeholder="Enter ID"  required>
+                    </div>
+                    <div class="form-group">
+                        <label for="class">Class:</label>
+                        <input type="text" class="form-control" pattern="^[A-Za-z0-9 ]+$" title="Class can only contain letters, numbers, and spaces" id="studentClass" placeholder="Enter class" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rollNo">Roll No.:</label>
+                        <input type="number" class="form-control" id="rollNo" title="Roll number must be a valid number" placeholder="Enter roll number" required>
+                    </div>
+                    <button type="submit"  class="btn btn-custom btn-block" id="btn" >Add</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="col-md-8">
+            <div class="table-container">
+                <table class="table table-bordered" id="userTable"> 
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Id</th>
+                            <th>Class</th>
+                            <th>Roll No.</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <!-- User data rows will be appended here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
+</body>
+</html>
